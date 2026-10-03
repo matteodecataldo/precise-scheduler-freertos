@@ -1,0 +1,32 @@
+Test 1 - HRT task complete before their deadline PASSED
+Test 2 - HRT tasks exceed their deadlines: PASSED
+Test 3 - An HRT exceeds its deadline and another HRT starts on the same tick: PASSED
+Test 4 - SRT preempted by HRT: PASSED
+Test 5 - SRT preempted by HRT then resumes: PASSED
+Test 6 - Major frame reset, deterministic replay: PASSED
+Test 7 - SRT runs in gap between two HRT tasks: PASSED
+Test 8 - Single HRT task, SRT never preempted: PASSED
+Test 9 - Two SRT tasks run in order: PASSED
+Test 10 - HRT in last subframe replays each major frame: PASSED
+Test 11 - Passes a NULL pointer to the scheduler configuration: PASSED
+Test 12 - Sets an invalid Major Frame duration (0): PASSED
+Test 13 - Sets a different value for configRT_SUBFRAME_COUNT and uxSubframeCount in static allocation: PASSED
+Test 14 - Sets an invalid Subframe Count (0): PASSED
+Test 15 - Sets a different value for configRT_TASK_COUNT and uxTaskCount in static allocation: PASSED
+Test 16 - Sets an invalid Task Count (0): PASSED
+Test 17 - Passes a NULL pointer to the task list configuration: PASSED
+Test 18 - Major frame is not perfectly divisible by the number of subframes: PASSED
+Test 19 - A task is provided without a name (NULL string): PASSED
+Test 20 - A task is provided without a function (NULL pointer): PASSED
+Test 21 - Task has invalid stack size , e.g. set to 0 ( less than configMINIMAL_STACK_SIZE ): PASSED
+Test 22 - Task type is neither HRT nor SRT ( e.g., IDLE ): PASSED
+Test 23 - Task is assigned to a subframe ID that exceeds the configured number of subframes: PASSED
+Test 24 - Task start time is greater than or equal to its deadline: PASSED
+Test 25 - Task end time is greater than or equal than the major frame duration: PASSED
+Test 26 - Task start and/or end time exceeds the boundary of its assigned subframe: PASSED
+Test 27 - Two HRT tasks are scheduled with overlapping execution windows in the same subframe: PASSED
+Test 28 - Passes HRTs not ordered by start time: PASSED
+Test 29 - vConfigureScheduler is not called: PASSED
+Test 30 - vConfigureScheduler is called twice: PASSED
+Test 31 - Stress Test: each tick there is an HRT start time: PASSED
+Test 32 - Overhead: details in logs/overhead_trace.log

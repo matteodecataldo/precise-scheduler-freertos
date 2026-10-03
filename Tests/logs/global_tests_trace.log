@@ -1,0 +1,1035 @@
+
+=============================================================
+  TARGET TEST: main_test_01.c 
+=============================================================
+--- TIMELINE SCHEDULER TRACE START ---
+   Tick    |    Time (ms)   |   Event Type   |   Task Name   
+-------------------------------------------------------------
+[     0 ]  |  [     0 ms ]  |   SRT START:    Task_C
+[    10 ]  |  [    10 ms ]  |   Task_C PREEMPTED
+[    10 ]  |  [    10 ms ]  |   HRT START:    Task_A
+[    60 ]  |  [    60 ms ]  |   TASK END:     Task_A
+[    60 ]  |  [    60 ms ]  |   SRT RESUME:   Task_C
+[    60 ]  |  [    60 ms ]  |   TASK END:     Task_C
+[    60 ]  |  [    60 ms ]  |   SRT START:    Task_D
+[    80 ]  |  [    80 ms ]  |   TASK END:     Task_D
+[    80 ]  |  [    80 ms ]  |   SRT START:    Task_C
+[   100 ]  |  [   100 ms ]  |   SUBFRAME END
+
+[   111 ]  |  [   111 ms ]  |   TASK END:     Task_C
+[   111 ]  |  [   111 ms ]  |   SRT START:    Task_D
+[   131 ]  |  [   131 ms ]  |   TASK END:     Task_D
+[   131 ]  |  [   131 ms ]  |   SRT START:    Task_C
+[   165 ]  |  [   165 ms ]  |   TASK END:     Task_C
+[   165 ]  |  [   165 ms ]  |   SRT START:    Task_D
+[   186 ]  |  [   186 ms ]  |   TASK END:     Task_D
+[   186 ]  |  [   186 ms ]  |   SRT START:    Task_C
+[   200 ]  |  [   200 ms ]  |   SUBFRAME END
+
+[   200 ]  |  [   200 ms ]  |   Task_C PREEMPTED
+[   200 ]  |  [   200 ms ]  |   HRT START:    Task_B
+[   272 ]  |  [   272 ms ]  |   TASK END:     Task_B
+[   272 ]  |  [   272 ms ]  |   SRT RESUME:   Task_C
+[   273 ]  |  [   273 ms ]  |   TASK END:     Task_C
+[   273 ]  |  [   273 ms ]  |   SRT START:    Task_D
+[   294 ]  |  [   294 ms ]  |   TASK END:     Task_D
+[   294 ]  |  [   294 ms ]  |   SRT START:    Task_C
+[   300 ]  |  [   300 ms ]  |   SUBFRAME END
+
+[   325 ]  |  [   325 ms ]  |   TASK END:     Task_C
+[   325 ]  |  [   325 ms ]  |   SRT START:    Task_D
+[   346 ]  |  [   346 ms ]  |   TASK END:     Task_D
+[   346 ]  |  [   346 ms ]  |   SRT START:    Task_C
+[   378 ]  |  [   378 ms ]  |   TASK END:     Task_C
+[   378 ]  |  [   378 ms ]  |   SRT START:    Task_D
+[   398 ]  |  [   398 ms ]  |   TASK END:     Task_D
+[   398 ]  |  [   398 ms ]  |   SRT START:    Task_C
+[   400 ]  |  [   400 ms ]  |   SUBFRAME END
+
+[   429 ]  |  [   429 ms ]  |   TASK END:     Task_C
+[   429 ]  |  [   429 ms ]  |   SRT START:    Task_D
+[   449 ]  |  [   449 ms ]  |   TASK END:     Task_D
+[   449 ]  |  [   449 ms ]  |   SRT START:    Task_C
+[   481 ]  |  [   481 ms ]  |   TASK END:     Task_C
+[   481 ]  |  [   481 ms ]  |   SRT START:    Task_D
+[   500 ]  |  [   500 ms ]  |   -------MAJOR FRAME END-------
+
+--- TIMELINE SCHEDULER TRACE END ---
+
+=============================================================
+  TARGET TEST: main_test_02.c 
+=============================================================
+--- TIMELINE SCHEDULER TRACE START ---
+   Tick    |    Time (ms)   |   Event Type   |   Task Name   
+-------------------------------------------------------------
+[     0 ]  |  [     0 ms ]  |   SRT START:    Task_C
+[    10 ]  |  [    10 ms ]  |   Task_C PREEMPTED
+[    10 ]  |  [    10 ms ]  |   HRT START:    Task_A
+[    99 ]  |  [    99 ms ]  |   Task_A TERMINATED (Deadline Missed @ tick 99 / 99 ms)
+[    99 ]  |  [    99 ms ]  |   SRT RESUME:   Task_C
+[    99 ]  |  [    99 ms ]  |   TASK END:     Task_C
+[    99 ]  |  [    99 ms ]  |   SRT START:    Task_D
+[   100 ]  |  [   100 ms ]  |   SUBFRAME END
+
+[   119 ]  |  [   119 ms ]  |   TASK END:     Task_D
+[   119 ]  |  [   119 ms ]  |   SRT START:    Task_C
+[   150 ]  |  [   150 ms ]  |   TASK END:     Task_C
+[   150 ]  |  [   150 ms ]  |   SRT START:    Task_D
+[   171 ]  |  [   171 ms ]  |   TASK END:     Task_D
+[   171 ]  |  [   171 ms ]  |   SRT START:    Task_C
+[   200 ]  |  [   200 ms ]  |   SUBFRAME END
+
+[   200 ]  |  [   200 ms ]  |   Task_C PREEMPTED
+[   200 ]  |  [   200 ms ]  |   HRT START:    Task_B
+[   298 ]  |  [   298 ms ]  |   Task_B TERMINATED (Deadline Missed @ tick 298 / 298 ms)
+[   298 ]  |  [   298 ms ]  |   SRT RESUME:   Task_C
+[   298 ]  |  [   298 ms ]  |   TASK END:     Task_C
+[   298 ]  |  [   298 ms ]  |   SRT START:    Task_D
+[   300 ]  |  [   300 ms ]  |   SUBFRAME END
+
+[   318 ]  |  [   318 ms ]  |   TASK END:     Task_D
+[   318 ]  |  [   318 ms ]  |   SRT START:    Task_C
+[   349 ]  |  [   349 ms ]  |   TASK END:     Task_C
+[   349 ]  |  [   349 ms ]  |   SRT START:    Task_D
+[   371 ]  |  [   371 ms ]  |   TASK END:     Task_D
+[   371 ]  |  [   371 ms ]  |   SRT START:    Task_C
+[   400 ]  |  [   400 ms ]  |   SUBFRAME END
+
+[   402 ]  |  [   402 ms ]  |   TASK END:     Task_C
+[   402 ]  |  [   402 ms ]  |   SRT START:    Task_D
+[   423 ]  |  [   423 ms ]  |   TASK END:     Task_D
+[   423 ]  |  [   423 ms ]  |   SRT START:    Task_C
+[   454 ]  |  [   454 ms ]  |   TASK END:     Task_C
+[   454 ]  |  [   454 ms ]  |   SRT START:    Task_D
+[   475 ]  |  [   475 ms ]  |   TASK END:     Task_D
+[   475 ]  |  [   475 ms ]  |   SRT START:    Task_C
+[   500 ]  |  [   500 ms ]  |   -------MAJOR FRAME END-------
+
+--- TIMELINE SCHEDULER TRACE END ---
+
+=============================================================
+  TARGET TEST: main_test_03.c 
+=============================================================
+--- TIMELINE SCHEDULER TRACE START ---
+   Tick    |    Time (ms)   |   Event Type   |   Task Name   
+-------------------------------------------------------------
+[     0 ]  |  [     0 ms ]  |   HRT START:    Task_A
+[    50 ]  |  [    50 ms ]  |   Task_A TERMINATED (Deadline Missed @ tick 50 / 50 ms)
+[    50 ]  |  [    50 ms ]  |   HRT START:    Task_B
+[    92 ]  |  [    92 ms ]  |   TASK END:     Task_B
+[    92 ]  |  [    92 ms ]  |   SRT START:    Task_C
+[   100 ]  |  [   100 ms ]  |   SUBFRAME END
+
+[   123 ]  |  [   123 ms ]  |   TASK END:     Task_C
+[   123 ]  |  [   123 ms ]  |   SRT START:    Task_D
+[   145 ]  |  [   145 ms ]  |   TASK END:     Task_D
+[   145 ]  |  [   145 ms ]  |   SRT START:    Task_C
+[   177 ]  |  [   177 ms ]  |   TASK END:     Task_C
+[   177 ]  |  [   177 ms ]  |   SRT START:    Task_D
+[   199 ]  |  [   199 ms ]  |   TASK END:     Task_D
+[   199 ]  |  [   199 ms ]  |   SRT START:    Task_C
+[   200 ]  |  [   200 ms ]  |   SUBFRAME END
+
+[   235 ]  |  [   235 ms ]  |   TASK END:     Task_C
+[   235 ]  |  [   235 ms ]  |   SRT START:    Task_D
+[   256 ]  |  [   256 ms ]  |   TASK END:     Task_D
+[   256 ]  |  [   256 ms ]  |   SRT START:    Task_C
+[   287 ]  |  [   287 ms ]  |   TASK END:     Task_C
+[   287 ]  |  [   287 ms ]  |   SRT START:    Task_D
+[   300 ]  |  [   300 ms ]  |   SUBFRAME END
+
+[   308 ]  |  [   308 ms ]  |   TASK END:     Task_D
+[   308 ]  |  [   308 ms ]  |   SRT START:    Task_C
+[   339 ]  |  [   339 ms ]  |   TASK END:     Task_C
+[   339 ]  |  [   339 ms ]  |   SRT START:    Task_D
+[   359 ]  |  [   359 ms ]  |   TASK END:     Task_D
+[   359 ]  |  [   359 ms ]  |   SRT START:    Task_C
+[   390 ]  |  [   390 ms ]  |   TASK END:     Task_C
+[   390 ]  |  [   390 ms ]  |   SRT START:    Task_D
+[   400 ]  |  [   400 ms ]  |   SUBFRAME END
+
+[   410 ]  |  [   410 ms ]  |   TASK END:     Task_D
+[   410 ]  |  [   410 ms ]  |   SRT START:    Task_C
+[   441 ]  |  [   441 ms ]  |   TASK END:     Task_C
+[   441 ]  |  [   441 ms ]  |   SRT START:    Task_D
+[   462 ]  |  [   462 ms ]  |   TASK END:     Task_D
+[   462 ]  |  [   462 ms ]  |   SRT START:    Task_C
+[   494 ]  |  [   494 ms ]  |   TASK END:     Task_C
+[   494 ]  |  [   494 ms ]  |   SRT START:    Task_D
+[   500 ]  |  [   500 ms ]  |   -------MAJOR FRAME END-------
+
+--- TIMELINE SCHEDULER TRACE END ---
+
+=============================================================
+  TARGET TEST: main_test_04.c 
+=============================================================
+--- TIMELINE SCHEDULER TRACE START ---
+   Tick    |    Time (ms)   |   Event Type   |   Task Name   
+-------------------------------------------------------------
+[     0 ]  |  [     0 ms ]  |   SRT START:    Task_C
+[    50 ]  |  [    50 ms ]  |   Task_C PREEMPTED
+[    50 ]  |  [    50 ms ]  |   HRT START:    Task_A
+[    91 ]  |  [    91 ms ]  |   TASK END:     Task_A
+[    91 ]  |  [    91 ms ]  |   SRT RESUME:   Task_C
+[    91 ]  |  [    91 ms ]  |   TASK END:     Task_C
+[    91 ]  |  [    91 ms ]  |   SRT START:    Task_D
+[   100 ]  |  [   100 ms ]  |   SUBFRAME END
+
+[   111 ]  |  [   111 ms ]  |   TASK END:     Task_D
+[   111 ]  |  [   111 ms ]  |   SRT START:    Task_C
+[   192 ]  |  [   192 ms ]  |   TASK END:     Task_C
+[   192 ]  |  [   192 ms ]  |   SRT START:    Task_D
+[   200 ]  |  [   200 ms ]  |   SUBFRAME END
+
+[   200 ]  |  [   200 ms ]  |   Task_D PREEMPTED
+[   200 ]  |  [   200 ms ]  |   HRT START:    Task_B
+[   271 ]  |  [   271 ms ]  |   TASK END:     Task_B
+[   271 ]  |  [   271 ms ]  |   SRT RESUME:   Task_D
+[   272 ]  |  [   272 ms ]  |   TASK END:     Task_D
+[   272 ]  |  [   272 ms ]  |   SRT START:    Task_C
+[   300 ]  |  [   300 ms ]  |   SUBFRAME END
+
+[   357 ]  |  [   357 ms ]  |   TASK END:     Task_C
+[   357 ]  |  [   357 ms ]  |   SRT START:    Task_D
+[   384 ]  |  [   384 ms ]  |   TASK END:     Task_D
+[   384 ]  |  [   384 ms ]  |   SRT START:    Task_C
+[   400 ]  |  [   400 ms ]  |   SUBFRAME END
+
+[   465 ]  |  [   465 ms ]  |   TASK END:     Task_C
+[   465 ]  |  [   465 ms ]  |   SRT START:    Task_D
+[   486 ]  |  [   486 ms ]  |   TASK END:     Task_D
+[   486 ]  |  [   486 ms ]  |   SRT START:    Task_C
+[   500 ]  |  [   500 ms ]  |   -------MAJOR FRAME END-------
+
+--- TIMELINE SCHEDULER TRACE END ---
+
+=============================================================
+  TARGET TEST: main_test_05.c 
+=============================================================
+--- TIMELINE SCHEDULER TRACE START ---
+   Tick    |    Time (ms)   |   Event Type   |   Task Name   
+-------------------------------------------------------------
+[     0 ]  |  [     0 ms ]  |   SRT START:    Task_C
+[    20 ]  |  [    20 ms ]  |   Task_C PREEMPTED
+[    20 ]  |  [    20 ms ]  |   HRT START:    Task_A
+[    42 ]  |  [    42 ms ]  |   TASK END:     Task_A
+[    42 ]  |  [    42 ms ]  |   SRT RESUME:   Task_C
+[    70 ]  |  [    70 ms ]  |   Task_C PREEMPTED
+[    70 ]  |  [    70 ms ]  |   HRT START:    Task_B
+[    99 ]  |  [    99 ms ]  |   Task_B TERMINATED (Deadline Missed @ tick 99 / 99 ms)
+[    99 ]  |  [    99 ms ]  |   SRT RESUME:   Task_C
+[   100 ]  |  [   100 ms ]  |   SUBFRAME END
+
+[   100 ]  |  [   100 ms ]  |   TASK END:     Task_C
+[   100 ]  |  [   100 ms ]  |   SRT START:    Task_D
+[   122 ]  |  [   122 ms ]  |   TASK END:     Task_D
+[   122 ]  |  [   122 ms ]  |   SRT START:    Task_C
+[   200 ]  |  [   200 ms ]  |   SUBFRAME END
+
+[   222 ]  |  [   222 ms ]  |   TASK END:     Task_C
+[   222 ]  |  [   222 ms ]  |   SRT START:    Task_D
+[   242 ]  |  [   242 ms ]  |   TASK END:     Task_D
+[   242 ]  |  [   242 ms ]  |   SRT START:    Task_C
+[   300 ]  |  [   300 ms ]  |   SUBFRAME END
+
+[   349 ]  |  [   349 ms ]  |   TASK END:     Task_C
+[   349 ]  |  [   349 ms ]  |   SRT START:    Task_D
+[   369 ]  |  [   369 ms ]  |   TASK END:     Task_D
+[   369 ]  |  [   369 ms ]  |   SRT START:    Task_C
+[   400 ]  |  [   400 ms ]  |   SUBFRAME END
+
+[   469 ]  |  [   469 ms ]  |   TASK END:     Task_C
+[   469 ]  |  [   469 ms ]  |   SRT START:    Task_D
+[   490 ]  |  [   490 ms ]  |   TASK END:     Task_D
+[   490 ]  |  [   490 ms ]  |   SRT START:    Task_C
+[   500 ]  |  [   500 ms ]  |   -------MAJOR FRAME END-------
+
+--- TIMELINE SCHEDULER TRACE END ---
+
+=============================================================
+  TARGET TEST: main_test_06.c 
+=============================================================
+--- TIMELINE SCHEDULER TRACE START ---
+   Tick    |    Time (ms)   |   Event Type   |   Task Name   
+-------------------------------------------------------------
+[     0 ]  |  [     0 ms ]  |   SRT START:    Task_C
+[    10 ]  |  [    10 ms ]  |   Task_C PREEMPTED
+[    10 ]  |  [    10 ms ]  |   HRT START:    Task_A
+[    62 ]  |  [    62 ms ]  |   TASK END:     Task_A
+[    62 ]  |  [    62 ms ]  |   SRT RESUME:   Task_C
+[    63 ]  |  [    63 ms ]  |   TASK END:     Task_C
+[    63 ]  |  [    63 ms ]  |   SRT START:    Task_D
+[    84 ]  |  [    84 ms ]  |   TASK END:     Task_D
+[    84 ]  |  [    84 ms ]  |   SRT START:    Task_C
+[   100 ]  |  [   100 ms ]  |   SUBFRAME END
+
+[   115 ]  |  [   115 ms ]  |   TASK END:     Task_C
+[   115 ]  |  [   115 ms ]  |   SRT START:    Task_D
+[   136 ]  |  [   136 ms ]  |   TASK END:     Task_D
+[   136 ]  |  [   136 ms ]  |   SRT START:    Task_C
+[   167 ]  |  [   167 ms ]  |   TASK END:     Task_C
+[   167 ]  |  [   167 ms ]  |   SRT START:    Task_D
+[   200 ]  |  [   200 ms ]  |   SUBFRAME END
+
+[   200 ]  |  [   200 ms ]  |   Task_D PREEMPTED
+[   200 ]  |  [   200 ms ]  |   HRT START:    Task_B
+[   288 ]  |  [   288 ms ]  |   TASK END:     Task_B
+[   288 ]  |  [   288 ms ]  |   SRT RESUME:   Task_D
+[   290 ]  |  [   290 ms ]  |   TASK END:     Task_D
+[   290 ]  |  [   290 ms ]  |   SRT START:    Task_C
+[   300 ]  |  [   300 ms ]  |   SUBFRAME END
+
+[   321 ]  |  [   321 ms ]  |   TASK END:     Task_C
+[   321 ]  |  [   321 ms ]  |   SRT START:    Task_D
+[   343 ]  |  [   343 ms ]  |   TASK END:     Task_D
+[   343 ]  |  [   343 ms ]  |   SRT START:    Task_C
+[   375 ]  |  [   375 ms ]  |   TASK END:     Task_C
+[   375 ]  |  [   375 ms ]  |   SRT START:    Task_D
+[   400 ]  |  [   400 ms ]  |   SUBFRAME END
+
+[   403 ]  |  [   403 ms ]  |   TASK END:     Task_D
+[   403 ]  |  [   403 ms ]  |   SRT START:    Task_C
+[   434 ]  |  [   434 ms ]  |   TASK END:     Task_C
+[   434 ]  |  [   434 ms ]  |   SRT START:    Task_D
+[   455 ]  |  [   455 ms ]  |   TASK END:     Task_D
+[   455 ]  |  [   455 ms ]  |   SRT START:    Task_C
+[   487 ]  |  [   487 ms ]  |   TASK END:     Task_C
+[   487 ]  |  [   487 ms ]  |   SRT START:    Task_D
+[   500 ]  |  [   500 ms ]  |   -------MAJOR FRAME END-------
+
+[   500 ]  |  [   500 ms ]  |   MAJOR FRAME START 
+[   500 ]  |  [   500 ms ]  |   SRT START:    Task_C
+[   510 ]  |  [   510 ms ]  |   Task_C PREEMPTED
+[   510 ]  |  [   510 ms ]  |   HRT START:    Task_A
+[   561 ]  |  [   561 ms ]  |   TASK END:     Task_A
+[   561 ]  |  [   561 ms ]  |   SRT RESUME:   Task_C
+[   562 ]  |  [   562 ms ]  |   TASK END:     Task_C
+[   562 ]  |  [   562 ms ]  |   SRT START:    Task_D
+[   583 ]  |  [   583 ms ]  |   TASK END:     Task_D
+[   583 ]  |  [   583 ms ]  |   SRT START:    Task_C
+[   600 ]  |  [   600 ms ]  |   SUBFRAME END
+
+[   614 ]  |  [   614 ms ]  |   TASK END:     Task_C
+[   614 ]  |  [   614 ms ]  |   SRT START:    Task_D
+[   637 ]  |  [   637 ms ]  |   TASK END:     Task_D
+[   637 ]  |  [   637 ms ]  |   SRT START:    Task_C
+[   669 ]  |  [   669 ms ]  |   TASK END:     Task_C
+[   669 ]  |  [   669 ms ]  |   SRT START:    Task_D
+[   689 ]  |  [   689 ms ]  |   TASK END:     Task_D
+[   689 ]  |  [   689 ms ]  |   SRT START:    Task_C
+[   700 ]  |  [   700 ms ]  |   SUBFRAME END
+
+[   700 ]  |  [   700 ms ]  |   Task_C PREEMPTED
+[   700 ]  |  [   700 ms ]  |   HRT START:    Task_B
+[   772 ]  |  [   772 ms ]  |   TASK END:     Task_B
+[   772 ]  |  [   772 ms ]  |   SRT RESUME:   Task_C
+[   777 ]  |  [   777 ms ]  |   TASK END:     Task_C
+[   777 ]  |  [   777 ms ]  |   SRT START:    Task_D
+[   798 ]  |  [   798 ms ]  |   TASK END:     Task_D
+[   798 ]  |  [   798 ms ]  |   SRT START:    Task_C
+[   800 ]  |  [   800 ms ]  |   SUBFRAME END
+
+[   828 ]  |  [   828 ms ]  |   TASK END:     Task_C
+[   828 ]  |  [   828 ms ]  |   SRT START:    Task_D
+[   849 ]  |  [   849 ms ]  |   TASK END:     Task_D
+[   849 ]  |  [   849 ms ]  |   SRT START:    Task_C
+[   879 ]  |  [   879 ms ]  |   TASK END:     Task_C
+[   879 ]  |  [   879 ms ]  |   SRT START:    Task_D
+[   900 ]  |  [   900 ms ]  |   SUBFRAME END
+
+[   901 ]  |  [   901 ms ]  |   TASK END:     Task_D
+[   901 ]  |  [   901 ms ]  |   SRT START:    Task_C
+[   932 ]  |  [   932 ms ]  |   TASK END:     Task_C
+[   932 ]  |  [   932 ms ]  |   SRT START:    Task_D
+[   954 ]  |  [   954 ms ]  |   TASK END:     Task_D
+[   954 ]  |  [   954 ms ]  |   SRT START:    Task_C
+[   986 ]  |  [   986 ms ]  |   TASK END:     Task_C
+[   986 ]  |  [   986 ms ]  |   SRT START:    Task_D
+[  1000 ]  |  [  1000 ms ]  |   -------MAJOR FRAME END-------
+
+[  1000 ]  |  [  1000 ms ]  |   MAJOR FRAME START 
+[  1000 ]  |  [  1000 ms ]  |   SRT START:    Task_C
+[  1010 ]  |  [  1010 ms ]  |   Task_C PREEMPTED
+[  1010 ]  |  [  1010 ms ]  |   HRT START:    Task_A
+[  1060 ]  |  [  1060 ms ]  |   TASK END:     Task_A
+[  1060 ]  |  [  1060 ms ]  |   SRT RESUME:   Task_C
+[  1060 ]  |  [  1060 ms ]  |   TASK END:     Task_C
+[  1060 ]  |  [  1060 ms ]  |   SRT START:    Task_D
+[  1080 ]  |  [  1080 ms ]  |   TASK END:     Task_D
+[  1080 ]  |  [  1080 ms ]  |   SRT START:    Task_C
+[  1100 ]  |  [  1100 ms ]  |   SUBFRAME END
+
+[  1110 ]  |  [  1110 ms ]  |   TASK END:     Task_C
+[  1110 ]  |  [  1110 ms ]  |   SRT START:    Task_D
+[  1131 ]  |  [  1131 ms ]  |   TASK END:     Task_D
+[  1131 ]  |  [  1131 ms ]  |   SRT START:    Task_C
+[  1161 ]  |  [  1161 ms ]  |   TASK END:     Task_C
+[  1161 ]  |  [  1161 ms ]  |   SRT START:    Task_D
+[  1182 ]  |  [  1182 ms ]  |   TASK END:     Task_D
+[  1182 ]  |  [  1182 ms ]  |   SRT START:    Task_C
+[  1200 ]  |  [  1200 ms ]  |   SUBFRAME END
+
+[  1200 ]  |  [  1200 ms ]  |   Task_C PREEMPTED
+[  1200 ]  |  [  1200 ms ]  |   HRT START:    Task_B
+[  1270 ]  |  [  1270 ms ]  |   TASK END:     Task_B
+[  1270 ]  |  [  1270 ms ]  |   SRT RESUME:   Task_C
+[  1270 ]  |  [  1270 ms ]  |   TASK END:     Task_C
+[  1270 ]  |  [  1270 ms ]  |   SRT START:    Task_D
+[  1291 ]  |  [  1291 ms ]  |   TASK END:     Task_D
+[  1291 ]  |  [  1291 ms ]  |   SRT START:    Task_C
+[  1300 ]  |  [  1300 ms ]  |   SUBFRAME END
+
+[  1321 ]  |  [  1321 ms ]  |   TASK END:     Task_C
+[  1321 ]  |  [  1321 ms ]  |   SRT START:    Task_D
+[  1342 ]  |  [  1342 ms ]  |   TASK END:     Task_D
+[  1342 ]  |  [  1342 ms ]  |   SRT START:    Task_C
+[  1376 ]  |  [  1376 ms ]  |   TASK END:     Task_C
+[  1376 ]  |  [  1376 ms ]  |   SRT START:    Task_D
+[  1400 ]  |  [  1400 ms ]  |   SUBFRAME END
+
+[  1401 ]  |  [  1401 ms ]  |   TASK END:     Task_D
+[  1401 ]  |  [  1401 ms ]  |   SRT START:    Task_C
+[  1432 ]  |  [  1432 ms ]  |   TASK END:     Task_C
+[  1432 ]  |  [  1432 ms ]  |   SRT START:    Task_D
+[  1454 ]  |  [  1454 ms ]  |   TASK END:     Task_D
+[  1454 ]  |  [  1454 ms ]  |   SRT START:    Task_C
+[  1485 ]  |  [  1485 ms ]  |   TASK END:     Task_C
+[  1485 ]  |  [  1485 ms ]  |   SRT START:    Task_D
+[  1500 ]  |  [  1500 ms ]  |   -------MAJOR FRAME END-------
+
+--- TIMELINE SCHEDULER TRACE END ---
+
+=============================================================
+  TARGET TEST: main_test_07.c 
+=============================================================
+--- TIMELINE SCHEDULER TRACE START ---
+   Tick    |    Time (ms)   |   Event Type   |   Task Name   
+-------------------------------------------------------------
+[     0 ]  |  [     0 ms ]  |   HRT START:    Task_A
+[    25 ]  |  [    25 ms ]  |   TASK END:     Task_A
+[    25 ]  |  [    25 ms ]  |   SRT START:    Task_C
+[    46 ]  |  [    46 ms ]  |   TASK END:     Task_C
+[    46 ]  |  [    46 ms ]  |   SRT START:    Task_D
+[    56 ]  |  [    56 ms ]  |   TASK END:     Task_D
+[    56 ]  |  [    56 ms ]  |   SRT START:    Task_C
+[    60 ]  |  [    60 ms ]  |   Task_C PREEMPTED
+[    60 ]  |  [    60 ms ]  |   HRT START:    Task_B
+[    97 ]  |  [    97 ms ]  |   TASK END:     Task_B
+[    97 ]  |  [    97 ms ]  |   SRT RESUME:   Task_C
+[   100 ]  |  [   100 ms ]  |   SUBFRAME END
+
+[   118 ]  |  [   118 ms ]  |   TASK END:     Task_C
+[   118 ]  |  [   118 ms ]  |   SRT START:    Task_D
+[   129 ]  |  [   129 ms ]  |   TASK END:     Task_D
+[   129 ]  |  [   129 ms ]  |   SRT START:    Task_C
+[   150 ]  |  [   150 ms ]  |   TASK END:     Task_C
+[   150 ]  |  [   150 ms ]  |   SRT START:    Task_D
+[   161 ]  |  [   161 ms ]  |   TASK END:     Task_D
+[   161 ]  |  [   161 ms ]  |   SRT START:    Task_C
+[   182 ]  |  [   182 ms ]  |   TASK END:     Task_C
+[   182 ]  |  [   182 ms ]  |   SRT START:    Task_D
+[   194 ]  |  [   194 ms ]  |   TASK END:     Task_D
+[   194 ]  |  [   194 ms ]  |   SRT START:    Task_C
+[   200 ]  |  [   200 ms ]  |   SUBFRAME END
+
+[   219 ]  |  [   219 ms ]  |   TASK END:     Task_C
+[   219 ]  |  [   219 ms ]  |   SRT START:    Task_D
+[   233 ]  |  [   233 ms ]  |   TASK END:     Task_D
+[   233 ]  |  [   233 ms ]  |   SRT START:    Task_C
+[   253 ]  |  [   253 ms ]  |   TASK END:     Task_C
+[   253 ]  |  [   253 ms ]  |   SRT START:    Task_D
+[   264 ]  |  [   264 ms ]  |   TASK END:     Task_D
+[   264 ]  |  [   264 ms ]  |   SRT START:    Task_C
+[   285 ]  |  [   285 ms ]  |   TASK END:     Task_C
+[   285 ]  |  [   285 ms ]  |   SRT START:    Task_D
+[   295 ]  |  [   295 ms ]  |   TASK END:     Task_D
+[   295 ]  |  [   295 ms ]  |   SRT START:    Task_C
+[   300 ]  |  [   300 ms ]  |   SUBFRAME END
+
+[   316 ]  |  [   316 ms ]  |   TASK END:     Task_C
+[   316 ]  |  [   316 ms ]  |   SRT START:    Task_D
+[   327 ]  |  [   327 ms ]  |   TASK END:     Task_D
+[   327 ]  |  [   327 ms ]  |   SRT START:    Task_C
+[   347 ]  |  [   347 ms ]  |   TASK END:     Task_C
+[   347 ]  |  [   347 ms ]  |   SRT START:    Task_D
+[   359 ]  |  [   359 ms ]  |   TASK END:     Task_D
+[   359 ]  |  [   359 ms ]  |   SRT START:    Task_C
+[   379 ]  |  [   379 ms ]  |   TASK END:     Task_C
+[   379 ]  |  [   379 ms ]  |   SRT START:    Task_D
+[   390 ]  |  [   390 ms ]  |   TASK END:     Task_D
+[   390 ]  |  [   390 ms ]  |   SRT START:    Task_C
+[   400 ]  |  [   400 ms ]  |   SUBFRAME END
+
+[   411 ]  |  [   411 ms ]  |   TASK END:     Task_C
+[   411 ]  |  [   411 ms ]  |   SRT START:    Task_D
+[   421 ]  |  [   421 ms ]  |   TASK END:     Task_D
+[   421 ]  |  [   421 ms ]  |   SRT START:    Task_C
+[   441 ]  |  [   441 ms ]  |   TASK END:     Task_C
+[   441 ]  |  [   441 ms ]  |   SRT START:    Task_D
+[   451 ]  |  [   451 ms ]  |   TASK END:     Task_D
+[   451 ]  |  [   451 ms ]  |   SRT START:    Task_C
+[   472 ]  |  [   472 ms ]  |   TASK END:     Task_C
+[   472 ]  |  [   472 ms ]  |   SRT START:    Task_D
+[   483 ]  |  [   483 ms ]  |   TASK END:     Task_D
+[   483 ]  |  [   483 ms ]  |   SRT START:    Task_C
+[   500 ]  |  [   500 ms ]  |   -------MAJOR FRAME END-------
+
+--- TIMELINE SCHEDULER TRACE END ---
+
+=============================================================
+  TARGET TEST: main_test_08.c 
+=============================================================
+--- TIMELINE SCHEDULER TRACE START ---
+   Tick    |    Time (ms)   |   Event Type   |   Task Name   
+-------------------------------------------------------------
+[     0 ]  |  [     0 ms ]  |   HRT START:    Task_A
+[    99 ]  |  [    99 ms ]  |   Task_A TERMINATED (Deadline Missed @ tick 99 / 99 ms)
+[    99 ]  |  [    99 ms ]  |   SRT START:    Task_B
+[   100 ]  |  [   100 ms ]  |   SUBFRAME END
+
+[   119 ]  |  [   119 ms ]  |   TASK END:     Task_B
+[   119 ]  |  [   119 ms ]  |   SRT START:    Task_C
+[   149 ]  |  [   149 ms ]  |   TASK END:     Task_C
+[   149 ]  |  [   149 ms ]  |   SRT START:    Task_D
+[   171 ]  |  [   171 ms ]  |   TASK END:     Task_D
+[   171 ]  |  [   171 ms ]  |   SRT START:    Task_B
+[   193 ]  |  [   193 ms ]  |   TASK END:     Task_B
+[   193 ]  |  [   193 ms ]  |   SRT START:    Task_C
+[   200 ]  |  [   200 ms ]  |   SUBFRAME END
+
+[   224 ]  |  [   224 ms ]  |   TASK END:     Task_C
+[   224 ]  |  [   224 ms ]  |   SRT START:    Task_D
+[   245 ]  |  [   245 ms ]  |   TASK END:     Task_D
+[   245 ]  |  [   245 ms ]  |   SRT START:    Task_B
+[   265 ]  |  [   265 ms ]  |   TASK END:     Task_B
+[   265 ]  |  [   265 ms ]  |   SRT START:    Task_C
+[   296 ]  |  [   296 ms ]  |   TASK END:     Task_C
+[   296 ]  |  [   296 ms ]  |   SRT START:    Task_D
+[   300 ]  |  [   300 ms ]  |   SUBFRAME END
+
+[   318 ]  |  [   318 ms ]  |   TASK END:     Task_D
+[   318 ]  |  [   318 ms ]  |   SRT START:    Task_B
+[   344 ]  |  [   344 ms ]  |   TASK END:     Task_B
+[   344 ]  |  [   344 ms ]  |   SRT START:    Task_C
+[   375 ]  |  [   375 ms ]  |   TASK END:     Task_C
+[   375 ]  |  [   375 ms ]  |   SRT START:    Task_D
+[   396 ]  |  [   396 ms ]  |   TASK END:     Task_D
+[   396 ]  |  [   396 ms ]  |   SRT START:    Task_B
+[   400 ]  |  [   400 ms ]  |   SUBFRAME END
+
+[   416 ]  |  [   416 ms ]  |   TASK END:     Task_B
+[   416 ]  |  [   416 ms ]  |   SRT START:    Task_C
+[   446 ]  |  [   446 ms ]  |   TASK END:     Task_C
+[   446 ]  |  [   446 ms ]  |   SRT START:    Task_D
+[   467 ]  |  [   467 ms ]  |   TASK END:     Task_D
+[   467 ]  |  [   467 ms ]  |   SRT START:    Task_B
+[   492 ]  |  [   492 ms ]  |   TASK END:     Task_B
+[   492 ]  |  [   492 ms ]  |   SRT START:    Task_C
+--- TIMELINE SCHEDULER TRACE END ---
+
+=============================================================
+  TARGET TEST: main_test_09.c 
+=============================================================
+--- TIMELINE SCHEDULER TRACE START ---
+   Tick    |    Time (ms)   |   Event Type   |   Task Name   
+-------------------------------------------------------------
+[     0 ]  |  [     0 ms ]  |   SRT START:    Task_C
+[    41 ]  |  [    41 ms ]  |   TASK END:     Task_C
+[    41 ]  |  [    41 ms ]  |   SRT START:    Task_D
+[    85 ]  |  [    85 ms ]  |   TASK END:     Task_D
+[    85 ]  |  [    85 ms ]  |   SRT START:    Task_C
+[   100 ]  |  [   100 ms ]  |   SUBFRAME END
+
+[   129 ]  |  [   129 ms ]  |   TASK END:     Task_C
+[   129 ]  |  [   129 ms ]  |   SRT START:    Task_D
+[   170 ]  |  [   170 ms ]  |   TASK END:     Task_D
+[   170 ]  |  [   170 ms ]  |   SRT START:    Task_C
+[   200 ]  |  [   200 ms ]  |   SUBFRAME END
+
+[   200 ]  |  [   200 ms ]  |   Task_C PREEMPTED
+[   200 ]  |  [   200 ms ]  |   HRT START:    Task_A
+[   270 ]  |  [   270 ms ]  |   TASK END:     Task_A
+[   270 ]  |  [   270 ms ]  |   SRT RESUME:   Task_C
+[   270 ]  |  [   270 ms ]  |   TASK END:     Task_C
+[   270 ]  |  [   270 ms ]  |   SRT START:    Task_D
+[   300 ]  |  [   300 ms ]  |   SUBFRAME END
+
+[   300 ]  |  [   300 ms ]  |   Task_D PREEMPTED
+[   300 ]  |  [   300 ms ]  |   HRT START:    Task_B
+[   372 ]  |  [   372 ms ]  |   TASK END:     Task_B
+[   372 ]  |  [   372 ms ]  |   SRT RESUME:   Task_D
+[   373 ]  |  [   373 ms ]  |   TASK END:     Task_D
+[   373 ]  |  [   373 ms ]  |   SRT START:    Task_C
+[   400 ]  |  [   400 ms ]  |   SUBFRAME END
+
+[   414 ]  |  [   414 ms ]  |   TASK END:     Task_C
+[   414 ]  |  [   414 ms ]  |   SRT START:    Task_D
+[   455 ]  |  [   455 ms ]  |   TASK END:     Task_D
+[   455 ]  |  [   455 ms ]  |   SRT START:    Task_C
+[   497 ]  |  [   497 ms ]  |   TASK END:     Task_C
+[   497 ]  |  [   497 ms ]  |   SRT START:    Task_D
+[   500 ]  |  [   500 ms ]  |   -------MAJOR FRAME END-------
+
+--- TIMELINE SCHEDULER TRACE END ---
+
+=============================================================
+  TARGET TEST: main_test_10.c 
+=============================================================
+--- TIMELINE SCHEDULER TRACE START ---
+   Tick    |    Time (ms)   |   Event Type   |   Task Name   
+-------------------------------------------------------------
+[     0 ]  |  [     0 ms ]  |   SRT START:    Task_C
+[    10 ]  |  [    10 ms ]  |   Task_C PREEMPTED
+[    10 ]  |  [    10 ms ]  |   HRT START:    Task_A
+[    61 ]  |  [    61 ms ]  |   TASK END:     Task_A
+[    61 ]  |  [    61 ms ]  |   SRT RESUME:   Task_C
+[    63 ]  |  [    63 ms ]  |   TASK END:     Task_C
+[    63 ]  |  [    63 ms ]  |   SRT START:    Task_D
+[    84 ]  |  [    84 ms ]  |   TASK END:     Task_D
+[    84 ]  |  [    84 ms ]  |   SRT START:    Task_C
+[   100 ]  |  [   100 ms ]  |   SUBFRAME END
+
+[   117 ]  |  [   117 ms ]  |   TASK END:     Task_C
+[   117 ]  |  [   117 ms ]  |   SRT START:    Task_D
+[   138 ]  |  [   138 ms ]  |   TASK END:     Task_D
+[   138 ]  |  [   138 ms ]  |   SRT START:    Task_C
+[   170 ]  |  [   170 ms ]  |   TASK END:     Task_C
+[   170 ]  |  [   170 ms ]  |   SRT START:    Task_D
+[   192 ]  |  [   192 ms ]  |   TASK END:     Task_D
+[   192 ]  |  [   192 ms ]  |   SRT START:    Task_C
+[   200 ]  |  [   200 ms ]  |   SUBFRAME END
+
+[   223 ]  |  [   223 ms ]  |   TASK END:     Task_C
+[   223 ]  |  [   223 ms ]  |   SRT START:    Task_D
+[   245 ]  |  [   245 ms ]  |   TASK END:     Task_D
+[   245 ]  |  [   245 ms ]  |   SRT START:    Task_C
+[   277 ]  |  [   277 ms ]  |   TASK END:     Task_C
+[   277 ]  |  [   277 ms ]  |   SRT START:    Task_D
+[   299 ]  |  [   299 ms ]  |   TASK END:     Task_D
+[   299 ]  |  [   299 ms ]  |   SRT START:    Task_C
+[   300 ]  |  [   300 ms ]  |   SUBFRAME END
+
+[   331 ]  |  [   331 ms ]  |   TASK END:     Task_C
+[   331 ]  |  [   331 ms ]  |   SRT START:    Task_D
+[   352 ]  |  [   352 ms ]  |   TASK END:     Task_D
+[   352 ]  |  [   352 ms ]  |   SRT START:    Task_C
+[   388 ]  |  [   388 ms ]  |   TASK END:     Task_C
+[   388 ]  |  [   388 ms ]  |   SRT START:    Task_D
+[   400 ]  |  [   400 ms ]  |   SUBFRAME END
+
+[   400 ]  |  [   400 ms ]  |   Task_D PREEMPTED
+[   400 ]  |  [   400 ms ]  |   HRT START:    Task_B
+[   500 ]  |  [   500 ms ]  |   Task_B TERMINATED (Deadline Missed @ tick 500 / 500 ms)
+[   500 ]  |  [   500 ms ]  |   -------MAJOR FRAME END-------
+
+[   500 ]  |  [   500 ms ]  |   MAJOR FRAME START 
+[   500 ]  |  [   500 ms ]  |   SRT START:    Task_C
+[   510 ]  |  [   510 ms ]  |   Task_C PREEMPTED
+[   510 ]  |  [   510 ms ]  |   HRT START:    Task_A
+[   561 ]  |  [   561 ms ]  |   TASK END:     Task_A
+[   561 ]  |  [   561 ms ]  |   SRT RESUME:   Task_C
+[   562 ]  |  [   562 ms ]  |   TASK END:     Task_C
+[   562 ]  |  [   562 ms ]  |   SRT START:    Task_D
+[   584 ]  |  [   584 ms ]  |   TASK END:     Task_D
+[   584 ]  |  [   584 ms ]  |   SRT START:    Task_C
+[   600 ]  |  [   600 ms ]  |   SUBFRAME END
+
+[   614 ]  |  [   614 ms ]  |   TASK END:     Task_C
+[   614 ]  |  [   614 ms ]  |   SRT START:    Task_D
+[   634 ]  |  [   634 ms ]  |   TASK END:     Task_D
+[   634 ]  |  [   634 ms ]  |   SRT START:    Task_C
+[   664 ]  |  [   664 ms ]  |   TASK END:     Task_C
+[   664 ]  |  [   664 ms ]  |   SRT START:    Task_D
+[   685 ]  |  [   685 ms ]  |   TASK END:     Task_D
+[   685 ]  |  [   685 ms ]  |   SRT START:    Task_C
+[   700 ]  |  [   700 ms ]  |   SUBFRAME END
+
+[   723 ]  |  [   723 ms ]  |   TASK END:     Task_C
+[   723 ]  |  [   723 ms ]  |   SRT START:    Task_D
+[   743 ]  |  [   743 ms ]  |   TASK END:     Task_D
+[   743 ]  |  [   743 ms ]  |   SRT START:    Task_C
+[   773 ]  |  [   773 ms ]  |   TASK END:     Task_C
+[   773 ]  |  [   773 ms ]  |   SRT START:    Task_D
+[   793 ]  |  [   793 ms ]  |   TASK END:     Task_D
+[   793 ]  |  [   793 ms ]  |   SRT START:    Task_C
+[   800 ]  |  [   800 ms ]  |   SUBFRAME END
+
+[   823 ]  |  [   823 ms ]  |   TASK END:     Task_C
+[   823 ]  |  [   823 ms ]  |   SRT START:    Task_D
+[   844 ]  |  [   844 ms ]  |   TASK END:     Task_D
+[   844 ]  |  [   844 ms ]  |   SRT START:    Task_C
+[   874 ]  |  [   874 ms ]  |   TASK END:     Task_C
+[   874 ]  |  [   874 ms ]  |   SRT START:    Task_D
+[   894 ]  |  [   894 ms ]  |   TASK END:     Task_D
+[   894 ]  |  [   894 ms ]  |   SRT START:    Task_C
+[   900 ]  |  [   900 ms ]  |   SUBFRAME END
+
+[   900 ]  |  [   900 ms ]  |   Task_C PREEMPTED
+[   900 ]  |  [   900 ms ]  |   HRT START:    Task_B
+[   500 ]  |  [   500 ms ]  |   Task_B TERMINATED (Deadline Missed @ tick 500 / 500 ms)
+[  1000 ]  |  [  1000 ms ]  |   -------MAJOR FRAME END-------
+
+[  1000 ]  |  [  1000 ms ]  |   MAJOR FRAME START 
+[  1000 ]  |  [  1000 ms ]  |   SRT START:    Task_C
+[  1010 ]  |  [  1010 ms ]  |   Task_C PREEMPTED
+[  1010 ]  |  [  1010 ms ]  |   HRT START:    Task_A
+[  1061 ]  |  [  1061 ms ]  |   TASK END:     Task_A
+[  1061 ]  |  [  1061 ms ]  |   SRT RESUME:   Task_C
+[  1062 ]  |  [  1062 ms ]  |   TASK END:     Task_C
+[  1062 ]  |  [  1062 ms ]  |   SRT START:    Task_D
+[  1083 ]  |  [  1083 ms ]  |   TASK END:     Task_D
+[  1083 ]  |  [  1083 ms ]  |   SRT START:    Task_C
+[  1100 ]  |  [  1100 ms ]  |   SUBFRAME END
+
+[  1114 ]  |  [  1114 ms ]  |   TASK END:     Task_C
+[  1114 ]  |  [  1114 ms ]  |   SRT START:    Task_D
+[  1134 ]  |  [  1134 ms ]  |   TASK END:     Task_D
+[  1134 ]  |  [  1134 ms ]  |   SRT START:    Task_C
+[  1164 ]  |  [  1164 ms ]  |   TASK END:     Task_C
+[  1164 ]  |  [  1164 ms ]  |   SRT START:    Task_D
+[  1185 ]  |  [  1185 ms ]  |   TASK END:     Task_D
+[  1185 ]  |  [  1185 ms ]  |   SRT START:    Task_C
+[  1200 ]  |  [  1200 ms ]  |   SUBFRAME END
+
+[  1215 ]  |  [  1215 ms ]  |   TASK END:     Task_C
+[  1215 ]  |  [  1215 ms ]  |   SRT START:    Task_D
+[  1235 ]  |  [  1235 ms ]  |   TASK END:     Task_D
+[  1235 ]  |  [  1235 ms ]  |   SRT START:    Task_C
+[  1268 ]  |  [  1268 ms ]  |   TASK END:     Task_C
+[  1268 ]  |  [  1268 ms ]  |   SRT START:    Task_D
+[  1288 ]  |  [  1288 ms ]  |   TASK END:     Task_D
+[  1288 ]  |  [  1288 ms ]  |   SRT START:    Task_C
+[  1300 ]  |  [  1300 ms ]  |   SUBFRAME END
+
+[  1322 ]  |  [  1322 ms ]  |   TASK END:     Task_C
+[  1322 ]  |  [  1322 ms ]  |   SRT START:    Task_D
+[  1343 ]  |  [  1343 ms ]  |   TASK END:     Task_D
+[  1343 ]  |  [  1343 ms ]  |   SRT START:    Task_C
+[  1374 ]  |  [  1374 ms ]  |   TASK END:     Task_C
+[  1374 ]  |  [  1374 ms ]  |   SRT START:    Task_D
+[  1395 ]  |  [  1395 ms ]  |   TASK END:     Task_D
+[  1395 ]  |  [  1395 ms ]  |   SRT START:    Task_C
+[  1400 ]  |  [  1400 ms ]  |   SUBFRAME END
+
+[  1400 ]  |  [  1400 ms ]  |   Task_C PREEMPTED
+[  1400 ]  |  [  1400 ms ]  |   HRT START:    Task_B
+[   500 ]  |  [   500 ms ]  |   Task_B TERMINATED (Deadline Missed @ tick 500 / 500 ms)
+[  1500 ]  |  [  1500 ms ]  |   -------MAJOR FRAME END-------
+
+--- TIMELINE SCHEDULER TRACE END ---
+
+=============================================================
+  TARGET TEST: main_test_11.c 
+=============================================================
+--- TIMELINE SCHEDULER TRACE START ---
+   Tick    |    Time (ms)   |   Event Type   |   Task Name   
+-------------------------------------------------------------
+[     0 ]  |  [     0 ms ]  | EVENT_ERROR_NULL_CONFIG
+--- TIMELINE SCHEDULER TRACE END ---
+
+=============================================================
+  TARGET TEST: main_test_12.c 
+=============================================================
+--- TIMELINE SCHEDULER TRACE START ---
+   Tick    |    Time (ms)   |   Event Type   |   Task Name   
+-------------------------------------------------------------
+[     0 ]  |  [     0 ms ]  | EVENT_ERROR_INVALID_MAJOR_FRAME
+--- TIMELINE SCHEDULER TRACE END ---
+
+=============================================================
+  TARGET TEST: main_test_13.c 
+=============================================================
+--- TIMELINE SCHEDULER TRACE START ---
+   Tick    |    Time (ms)   |   Event Type   |   Task Name   
+-------------------------------------------------------------
+[     0 ]  |  [     0 ms ]  | EVENT_WARNING_SUBFRAME_COUNT_MISMATCH
+--- TIMELINE SCHEDULER TRACE END ---
+
+=============================================================
+  TARGET TEST: main_test_14.c 
+=============================================================
+--- TIMELINE SCHEDULER TRACE START ---
+   Tick    |    Time (ms)   |   Event Type   |   Task Name   
+-------------------------------------------------------------
+[     0 ]  |  [     0 ms ]  | EVENT_ERROR_INVALID_SUBFRAME
+--- TIMELINE SCHEDULER TRACE END ---
+
+=============================================================
+  TARGET TEST: main_test_15.c 
+=============================================================
+--- TIMELINE SCHEDULER TRACE START ---
+   Tick    |    Time (ms)   |   Event Type   |   Task Name   
+-------------------------------------------------------------
+[     0 ]  |  [     0 ms ]  | EVENT_WARNING_TASK_COUNT_MISMATCH
+--- TIMELINE SCHEDULER TRACE END ---
+
+=============================================================
+  TARGET TEST: main_test_16.c 
+=============================================================
+--- TIMELINE SCHEDULER TRACE START ---
+   Tick    |    Time (ms)   |   Event Type   |   Task Name   
+-------------------------------------------------------------
+[     0 ]  |  [     0 ms ]  | EVENT_ERROR_INVALID_TASKCOUNT
+--- TIMELINE SCHEDULER TRACE END ---
+
+=============================================================
+  TARGET TEST: main_test_17.c 
+=============================================================
+--- TIMELINE SCHEDULER TRACE START ---
+   Tick    |    Time (ms)   |   Event Type   |   Task Name   
+-------------------------------------------------------------
+[     0 ]  |  [     0 ms ]  | EVENT_ERROR_NULL_TASKLIST
+--- TIMELINE SCHEDULER TRACE END ---
+
+=============================================================
+  TARGET TEST: main_test_18.c 
+=============================================================
+--- TIMELINE SCHEDULER TRACE START ---
+   Tick    |    Time (ms)   |   Event Type   |   Task Name   
+-------------------------------------------------------------
+[     0 ]  |  [     0 ms ]  | EVENT_ERROR_FRAME_ALIGNMENT
+--- TIMELINE SCHEDULER TRACE END ---
+
+=============================================================
+  TARGET TEST: main_test_19.c 
+=============================================================
+--- TIMELINE SCHEDULER TRACE START ---
+   Tick    |    Time (ms)   |   Event Type   |   Task Name   
+-------------------------------------------------------------
+[     0 ]  |  [     0 ms ]  | EVENT_ERROR_NULL_TASK_NAME
+--- TIMELINE SCHEDULER TRACE END ---
+
+=============================================================
+  TARGET TEST: main_test_20.c 
+=============================================================
+--- TIMELINE SCHEDULER TRACE START ---
+   Tick    |    Time (ms)   |   Event Type   |   Task Name   
+-------------------------------------------------------------
+[     0 ]  |  [     0 ms ]  | EVENT_ERROR_NULL_TASK_FUNCTION
+--- TIMELINE SCHEDULER TRACE END ---
+
+=============================================================
+  TARGET TEST: main_test_21.c 
+=============================================================
+--- TIMELINE SCHEDULER TRACE START ---
+   Tick    |    Time (ms)   |   Event Type   |   Task Name   
+-------------------------------------------------------------
+[     0 ]  |  [     0 ms ]  | EVENT_ERROR_INVALID_TASK_STACK_SIZE
+--- TIMELINE SCHEDULER TRACE END ---
+
+=============================================================
+  TARGET TEST: main_test_22.c 
+=============================================================
+--- TIMELINE SCHEDULER TRACE START ---
+   Tick    |    Time (ms)   |   Event Type   |   Task Name   
+-------------------------------------------------------------
+[     0 ]  |  [     0 ms ]  | EVENT_ERROR_INVALID_TASK_TYPE
+--- TIMELINE SCHEDULER TRACE END ---
+
+=============================================================
+  TARGET TEST: main_test_23.c 
+=============================================================
+--- TIMELINE SCHEDULER TRACE START ---
+   Tick    |    Time (ms)   |   Event Type   |   Task Name   
+-------------------------------------------------------------
+[     0 ]  |  [     0 ms ]  | EVENT_ERROR_INVALID_HRT_SUBFRAMEID
+--- TIMELINE SCHEDULER TRACE END ---
+
+=============================================================
+  TARGET TEST: main_test_24.c 
+=============================================================
+--- TIMELINE SCHEDULER TRACE START ---
+   Tick    |    Time (ms)   |   Event Type   |   Task Name   
+-------------------------------------------------------------
+[     0 ]  |  [     0 ms ]  | EVENT_ERROR_INVALID_HRT_INTERVAL
+--- TIMELINE SCHEDULER TRACE END ---
+
+=============================================================
+  TARGET TEST: main_test_25.c 
+=============================================================
+--- TIMELINE SCHEDULER TRACE START ---
+   Tick    |    Time (ms)   |   Event Type   |   Task Name   
+-------------------------------------------------------------
+[     0 ]  |  [     0 ms ]  | EVENT_ERROR_INVALID_HRT_EXCEEDS_MAJORFRAME_BOUND
+--- TIMELINE SCHEDULER TRACE END ---
+
+=============================================================
+  TARGET TEST: main_test_26.c 
+=============================================================
+--- TIMELINE SCHEDULER TRACE START ---
+   Tick    |    Time (ms)   |   Event Type   |   Task Name   
+-------------------------------------------------------------
+[     0 ]  |  [     0 ms ]  | EVENT_ERROR_INVALID_HRT_EXCEEDS_SUBFRAME_BOUND
+--- TIMELINE SCHEDULER TRACE END ---
+
+=============================================================
+  TARGET TEST: main_test_27.c 
+=============================================================
+--- TIMELINE SCHEDULER TRACE START ---
+   Tick    |    Time (ms)   |   Event Type   |   Task Name   
+-------------------------------------------------------------
+[     0 ]  |  [     0 ms ]  | EVENT_ERROR_INVALID_HRT_OVERLAP
+--- TIMELINE SCHEDULER TRACE END ---
+
+=============================================================
+  TARGET TEST: main_test_28.c 
+=============================================================
+--- TIMELINE SCHEDULER TRACE START ---
+   Tick    |    Time (ms)   |   Event Type   |   Task Name   
+-------------------------------------------------------------
+[     0 ]  |  [     0 ms ]  |   SRT START:    Task_F
+[    50 ]  |  [    50 ms ]  |   TASK END:     Task_F
+[    50 ]  |  [    50 ms ]  |   SRT START:    Task_G
+[   100 ]  |  [   100 ms ]  |   SUBFRAME END
+
+[   100 ]  |  [   100 ms ]  |   Task_G PREEMPTED
+[   100 ]  |  [   100 ms ]  |   HRT START:    Task_A
+[   101 ]  |  [   101 ms ]  |   TASK END:     Task_A
+[   101 ]  |  [   101 ms ]  |   SRT RESUME:   Task_G
+[   101 ]  |  [   101 ms ]  |   TASK END:     Task_G
+[   101 ]  |  [   101 ms ]  |   SRT START:    Task_F
+[   120 ]  |  [   120 ms ]  |   Task_F PREEMPTED
+[   120 ]  |  [   120 ms ]  |   HRT START:    Task_B
+[   120 ]  |  [   120 ms ]  |   TASK END:     Task_B
+[   120 ]  |  [   120 ms ]  |   SRT RESUME:   Task_F
+[   140 ]  |  [   140 ms ]  |   Task_F PREEMPTED
+[   140 ]  |  [   140 ms ]  |   HRT START:    Task_C
+[   140 ]  |  [   140 ms ]  |   TASK END:     Task_C
+[   140 ]  |  [   140 ms ]  |   SRT RESUME:   Task_F
+[   152 ]  |  [   152 ms ]  |   TASK END:     Task_F
+[   152 ]  |  [   152 ms ]  |   SRT START:    Task_G
+[   160 ]  |  [   160 ms ]  |   Task_G PREEMPTED
+[   160 ]  |  [   160 ms ]  |   HRT START:    Task_D
+[   164 ]  |  [   164 ms ]  |   TASK END:     Task_D
+[   164 ]  |  [   164 ms ]  |   SRT RESUME:   Task_G
+[   180 ]  |  [   180 ms ]  |   Task_G PREEMPTED
+[   180 ]  |  [   180 ms ]  |   HRT START:    Task_E
+[   180 ]  |  [   180 ms ]  |   TASK END:     Task_E
+[   180 ]  |  [   180 ms ]  |   SRT RESUME:   Task_G
+[   200 ]  |  [   200 ms ]  |   -------MAJOR FRAME END-------
+
+[   200 ]  |  [   200 ms ]  |   MAJOR FRAME START 
+[   200 ]  |  [   200 ms ]  |   SRT START:    Task_F
+[   251 ]  |  [   251 ms ]  |   TASK END:     Task_F
+[   251 ]  |  [   251 ms ]  |   SRT START:    Task_G
+[   300 ]  |  [   300 ms ]  |   SUBFRAME END
+
+[   300 ]  |  [   300 ms ]  |   Task_G PREEMPTED
+[   300 ]  |  [   300 ms ]  |   HRT START:    Task_A
+[   301 ]  |  [   301 ms ]  |   TASK END:     Task_A
+[   301 ]  |  [   301 ms ]  |   SRT RESUME:   Task_G
+[   302 ]  |  [   302 ms ]  |   TASK END:     Task_G
+[   302 ]  |  [   302 ms ]  |   SRT START:    Task_F
+[   320 ]  |  [   320 ms ]  |   Task_F PREEMPTED
+[   320 ]  |  [   320 ms ]  |   HRT START:    Task_B
+[   321 ]  |  [   321 ms ]  |   TASK END:     Task_B
+[   321 ]  |  [   321 ms ]  |   SRT RESUME:   Task_F
+[   340 ]  |  [   340 ms ]  |   Task_F PREEMPTED
+[   340 ]  |  [   340 ms ]  |   HRT START:    Task_C
+[   340 ]  |  [   340 ms ]  |   TASK END:     Task_C
+[   340 ]  |  [   340 ms ]  |   SRT RESUME:   Task_F
+[   353 ]  |  [   353 ms ]  |   TASK END:     Task_F
+[   353 ]  |  [   353 ms ]  |   SRT START:    Task_G
+[   360 ]  |  [   360 ms ]  |   Task_G PREEMPTED
+[   360 ]  |  [   360 ms ]  |   HRT START:    Task_D
+[   360 ]  |  [   360 ms ]  |   TASK END:     Task_D
+[   360 ]  |  [   360 ms ]  |   SRT RESUME:   Task_G
+[   380 ]  |  [   380 ms ]  |   Task_G PREEMPTED
+[   380 ]  |  [   380 ms ]  |   HRT START:    Task_E
+[   381 ]  |  [   381 ms ]  |   TASK END:     Task_E
+[   381 ]  |  [   381 ms ]  |   SRT RESUME:   Task_G
+[   400 ]  |  [   400 ms ]  |   -------MAJOR FRAME END-------
+
+--- TIMELINE SCHEDULER TRACE END ---
+
+=============================================================
+  TARGET TEST: main_test_29.c 
+=============================================================
+--- TIMELINE SCHEDULER TRACE START ---
+   Tick    |    Time (ms)   |   Event Type   |   Task Name   
+-------------------------------------------------------------
+[     0 ]  |  [     0 ms ]  | EVENT_ERROR_NOT_INITIALIZED
+--- TIMELINE SCHEDULER TRACE END ---
+
+=============================================================
+  TARGET TEST: main_test_30.c 
+=============================================================
+--- TIMELINE SCHEDULER TRACE START ---
+   Tick    |    Time (ms)   |   Event Type   |   Task Name   
+-------------------------------------------------------------
+[     0 ]  |  [     0 ms ]  | EVENT_ERROR_ALREADY_INITIALIZED
+[     0 ]  |  [     0 ms ]  |   NO TASK RUNNING ! IDLE TIME
+[   100 ]  |  [   100 ms ]  |   SUBFRAME END
+
+[   100 ]  |  [   100 ms ]  |   HRT START:    Task_A
+[   102 ]  |  [   102 ms ]  |   TASK END:     Task_A
+[   102 ]  |  [   102 ms ]  |   NO TASK RUNNING ! IDLE TIME
+[   200 ]  |  [   200 ms ]  |   -------MAJOR FRAME END-------
+
+[   200 ]  |  [   200 ms ]  |   MAJOR FRAME START 
+[   200 ]  |  [   200 ms ]  |   NO TASK RUNNING ! IDLE TIME
+[   300 ]  |  [   300 ms ]  |   SUBFRAME END
+
+[   300 ]  |  [   300 ms ]  |   HRT START:    Task_A
+[   300 ]  |  [   300 ms ]  |   TASK END:     Task_A
+[   300 ]  |  [   300 ms ]  |   NO TASK RUNNING ! IDLE TIME
+[   400 ]  |  [   400 ms ]  |   -------MAJOR FRAME END-------
+
+--- TIMELINE SCHEDULER TRACE END ---
+
+=============================================================
+  TARGET TEST: main_test_31.c 
+=============================================================
+--- TIMELINE SCHEDULER TRACE START ---
+   Tick    |    Time (ms)   |   Event Type   |   Task Name   
+-------------------------------------------------------------
+[     0 ]  |  [     0 ms ]  |   HRT START:    Task_A
+[     1 ]  |  [     1 ms ]  |   Task_A TERMINATED (Deadline Missed @ tick 1 / 1 ms)
+[     1 ]  |  [     1 ms ]  |   HRT START:    Task_B
+[     2 ]  |  [     2 ms ]  |   Task_B TERMINATED (Deadline Missed @ tick 2 / 2 ms)
+[     2 ]  |  [     2 ms ]  |   HRT START:    Task_C
+[     3 ]  |  [     3 ms ]  |   Task_C TERMINATED (Deadline Missed @ tick 3 / 3 ms)
+[     3 ]  |  [     3 ms ]  |   HRT START:    Task_D
+[     4 ]  |  [     4 ms ]  |   Task_D TERMINATED (Deadline Missed @ tick 4 / 4 ms)
+[     4 ]  |  [     4 ms ]  |   HRT START:    Task_E
+[     5 ]  |  [     5 ms ]  |   Task_E TERMINATED (Deadline Missed @ tick 5 / 5 ms)
+[     5 ]  |  [     5 ms ]  |   HRT START:    Task_F
+[     6 ]  |  [     6 ms ]  |   Task_F TERMINATED (Deadline Missed @ tick 6 / 6 ms)
+[     6 ]  |  [     6 ms ]  |   HRT START:    Task_G
+[     7 ]  |  [     7 ms ]  |   Task_G TERMINATED (Deadline Missed @ tick 7 / 7 ms)
+[     7 ]  |  [     7 ms ]  |   NO TASK RUNNING ! IDLE TIME
+[    10 ]  |  [    10 ms ]  |   -------MAJOR FRAME END-------
+
+--- TIMELINE SCHEDULER TRACE END ---
+
+=============================================================
+  TARGET TEST: main_test_32.c 
+=============================================================
+--- TIMELINE SCHEDULER TRACE START ---
+   Tick    |    Time (ms)   |   Event Type   |   Task Name   
+-------------------------------------------------------------
+[     0 ]  |  [     0 ms ]  |   HRT START:    Task_A
+[    12 ]  |  [    12 ms ]  |   TASK END:     Task_A
+[    12 ]  |  [    12 ms ]  |   SRT START:    Task_H
+[    20 ]  |  [    20 ms ]  |   Task_H PREEMPTED
+[    20 ]  |  [    20 ms ]  |   HRT START:    Task_B
+[    22 ]  |  [    22 ms ]  |   Task_B TERMINATED (Deadline Missed @ tick 22 / 22 ms)
+[    22 ]  |  [    22 ms ]  |   SRT RESUME:   Task_H
+[    27 ]  |  [    27 ms ]  |   TASK END:     Task_H
+[    27 ]  |  [    27 ms ]  |   SRT START:    Task_H
+[    32 ]  |  [    32 ms ]  |   TASK END:     Task_H
+[    32 ]  |  [    32 ms ]  |   SRT START:    Task_H
+[    40 ]  |  [    40 ms ]  |   Task_H PREEMPTED
+[    40 ]  |  [    40 ms ]  |   HRT START:    Task_C
+[    60 ]  |  [    60 ms ]  |   Task_C TERMINATED (Deadline Missed @ tick 60 / 60 ms)
+[    60 ]  |  [    60 ms ]  |   HRT START:    Task_D
+[    80 ]  |  [    80 ms ]  |   Task_D TERMINATED (Deadline Missed @ tick 80 / 80 ms)
+[    80 ]  |  [    80 ms ]  |   HRT START:    Task_E
+[   100 ]  |  [   100 ms ]  |   Task_E TERMINATED (Deadline Missed @ tick 100 / 100 ms)
+[   100 ]  |  [   100 ms ]  |   HRT START:    Task_F
+[   120 ]  |  [   120 ms ]  |   Task_F TERMINATED (Deadline Missed @ tick 120 / 120 ms)
+[   120 ]  |  [   120 ms ]  |   HRT START:    Task_G
+[   150 ]  |  [   150 ms ]  |   Task_G TERMINATED (Deadline Missed @ tick 150 / 150 ms)
+[   150 ]  |  [   150 ms ]  |   -------MAJOR FRAME END-------
+
+--- TIMELINE SCHEDULER TRACE END ---

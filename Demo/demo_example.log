@@ -1,0 +1,72 @@
+--- TIMELINE SCHEDULER TRACE START ---
+   Tick    |    Time (ms)   |   Event Type   |   Task Name   
+-------------------------------------------------------------
+[     0 ]  |  [     0 ms ]  |   SRT START:    Task_C
+[   100 ]  |  [   100 ms ]  |   Task_C PREEMPTED
+[   100 ]  |  [   100 ms ]  |   HRT START:    Task_A
+[   999 ]  |  [   999 ms ]  |   Task_A TERMINATED (Deadline Missed @ tick 999 / 999 ms)
+[   999 ]  |  [   999 ms ]  |   SRT RESUME:   Task_C
+[  1000 ]  |  [  1000 ms ]  |   SUBFRAME END
+
+[  1000 ]  |  [  1000 ms ]  |   TASK END:     Task_C
+[  1000 ]  |  [  1000 ms ]  |   SRT START:    Task_D
+[  1200 ]  |  [  1200 ms ]  |   TASK END:     Task_D
+[  1200 ]  |  [  1200 ms ]  |   SRT START:    Task_C
+[  2000 ]  |  [  2000 ms ]  |   SUBFRAME END
+
+[  2000 ]  |  [  2000 ms ]  |   Task_C PREEMPTED
+[  2000 ]  |  [  2000 ms ]  |   HRT START:    Task_B
+[  2700 ]  |  [  2700 ms ]  |   TASK END:     Task_B
+[  2700 ]  |  [  2700 ms ]  |   SRT RESUME:   Task_C
+[  2700 ]  |  [  2700 ms ]  |   TASK END:     Task_C
+[  2700 ]  |  [  2700 ms ]  |   SRT START:    Task_D
+[  2900 ]  |  [  2900 ms ]  |   TASK END:     Task_D
+[  2900 ]  |  [  2900 ms ]  |   SRT START:    Task_C
+[  3000 ]  |  [  3000 ms ]  |   SUBFRAME END
+
+[  3900 ]  |  [  3900 ms ]  |   TASK END:     Task_C
+[  3900 ]  |  [  3900 ms ]  |   SRT START:    Task_D
+[  4000 ]  |  [  4000 ms ]  |   SUBFRAME END
+
+[  4100 ]  |  [  4100 ms ]  |   TASK END:     Task_D
+[  4100 ]  |  [  4100 ms ]  |   SRT START:    Task_C
+[  5000 ]  |  [  5000 ms ]  |   -------MAJOR FRAME END-------
+
+[  5000 ]  |  [  5000 ms ]  |   MAJOR FRAME START 
+[  5000 ]  |  [  5000 ms ]  |   SRT START:    Task_C
+[  5100 ]  |  [  5100 ms ]  |   Task_C PREEMPTED
+[  5100 ]  |  [  5100 ms ]  |   HRT START:    Task_A
+[   999 ]  |  [   999 ms ]  |   Task_A TERMINATED (Deadline Missed @ tick 999 / 999 ms)
+[  5999 ]  |  [  5999 ms ]  |   SRT RESUME:   Task_C
+[  6000 ]  |  [  6000 ms ]  |   SUBFRAME END
+
+[  6000 ]  |  [  6000 ms ]  |   TASK END:     Task_C
+[  6000 ]  |  [  6000 ms ]  |   SRT START:    Task_D
+[  6200 ]  |  [  6200 ms ]  |   TASK END:     Task_D
+[  6200 ]  |  [  6200 ms ]  |   SRT START:    Task_C
+[  7000 ]  |  [  7000 ms ]  |   SUBFRAME END
+
+[  7000 ]  |  [  7000 ms ]  |   Task_C PREEMPTED
+[  7000 ]  |  [  7000 ms ]  |   HRT START:    Task_B
+[  7700 ]  |  [  7700 ms ]  |   TASK END:     Task_B
+[  7700 ]  |  [  7700 ms ]  |   SRT RESUME:   Task_C
+[  7700 ]  |  [  7700 ms ]  |   TASK END:     Task_C
+[  7700 ]  |  [  7700 ms ]  |   SRT START:    Task_D
+[  7900 ]  |  [  7900 ms ]  |   TASK END:     Task_D
+[  7900 ]  |  [  7900 ms ]  |   SRT START:    Task_C
+[  8000 ]  |  [  8000 ms ]  |   SUBFRAME END
+
+[  8901 ]  |  [  8901 ms ]  |   TASK END:     Task_C
+[  8901 ]  |  [  8901 ms ]  |   SRT START:    Task_D
+[  9000 ]  |  [  9000 ms ]  |   SUBFRAME END
+
+[  9101 ]  |  [  9101 ms ]  |   TASK END:     Task_D
+[  9101 ]  |  [  9101 ms ]  |   SRT START:    Task_C
+[ 10000 ]  |  [ 10000 ms ]  |   -------MAJOR FRAME END-------
+
+[ 10000 ]  |  [ 10000 ms ]  |   MAJOR FRAME START 
+[ 10000 ]  |  [ 10000 ms ]  |   SRT START:    Task_C
+[ 10100 ]  |  [ 10100 ms ]  |   Task_C PREEMPTED
+[ 10100 ]  |  [ 10100 ms ]  |   HRT START:    Task_A
+--- TIMELINE SCHEDULER TRACE END ---
+

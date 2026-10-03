@@ -1,0 +1,29 @@
+
+================ OVERHEAD REPORT ================
+Data Points Parsed      : 337 traces
+QEMU Scaling Ratio      : 1 SysTick = 20.0 instructions
+Total Major Frame Time  : 74996980 instructions
+-------------------------------------------------
+Policy Evaluations      : 8 (Avg: 534197.5 instrs/eval)
+Context Switches (Mech) : 10 (Avg: 12536.0 instrs/switch)
+-------------------------------------------------
+Policy Overhead         : 4273580  instrs  (0,05698336)
+Mechanism Overhead      : 125360   instrs  (0,00167153)
+-------------------------------------------------
+TOTAL SYSTEM OVERHEAD   : 4398940  instrs  (0,05865490)
+=================================================
+
+
+============= TICK OVERHEAD ISOLATION =============
+Data Points Parsed      : 337 traces
+QEMU Scaling Ratio      : 1 SysTick = 20.0 instructions
+-------------------------------------------------
+Empty RTOS Ticks        : 142
+  -> Total Instructions : 83297480
+  -> Average per Tick   : 586602.0 instrs
+-------------------------------------------------
+Switching RTOS Ticks    : 7
+  -> Total Instructions : 4106700
+  -> Average per Tick   : 586671.4 instrs
+=================================================
+
