@@ -4,7 +4,7 @@
 
 The project was developed as part of the **Computer Architectures and Operating Systems** course at **Politecnico di Torino** by a team of four students. 
 
-> **Team:** Matteo De Cataldo • Taha Zied Elghazel • Federico Capecelatro • Sera Albayrak
+> **Team:** [Matteo De Cataldo](https://github.com/matteodecataldo) • [Taha Zied Elghazel](https://github.com/taha-zied-elghazel) • [Federico Capecelatro](https://github.com/FedericoCapecelatro) • [Sera Albayrak](https://github.com/SeraaAlbayrakk)
 
 ## About the project
 A modified [FreeRTOS](https://www.freertos.org/) kernel that implements a deterministic, time-triggered scheduler (major/sub-frames) for hard and soft real-time tasks.
